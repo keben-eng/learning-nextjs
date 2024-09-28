@@ -1,6 +1,6 @@
 // import bcrypt from 'bcrypt';
 // import { db } from '@vercel/postgres';
-// import { invoices, customers, revenue, users } from '../lib/placeholder-data';
+// import { Invoices, customers, revenue, users } from '../lib/placeholder-data';
 
 // const client = await db.connect();
 
@@ -33,7 +33,7 @@
 //   await client.sql`CREATE EXTENSION IF NOT EXISTS "uuid-ossp"`;
 
 //   await client.sql`
-//     CREATE TABLE IF NOT EXISTS invoices (
+//     CREATE TABLE IF NOT EXISTS Invoices (
 //       id UUID DEFAULT uuid_generate_v4() PRIMARY KEY,
 //       customer_id UUID NOT NULL,
 //       amount INT NOT NULL,
@@ -43,9 +43,9 @@
 //   `;
 
 //   const insertedInvoices = await Promise.all(
-//     invoices.map(
+//     Invoices.map(
 //       (invoice) => client.sql`
-//         INSERT INTO invoices (customer_id, amount, status, date)
+//         INSERT INTO Invoices (customer_id, amount, status, date)
 //         VALUES (${invoice.customer_id}, ${invoice.amount}, ${invoice.status}, ${invoice.date})
 //         ON CONFLICT (id) DO NOTHING;
 //       `,
